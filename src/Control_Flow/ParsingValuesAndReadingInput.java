@@ -1,38 +1,44 @@
 package Control_Flow;
-import java.util.Scanner;
+import java.time.Year;
+import java.util.*;
 
 public class ParsingValuesAndReadingInput {
     public static void main(String[] args) {
-        int currentYear = 2023;
 
-        try{
-            System.out.println(getInputFromConsole(currentYear));
+
+        try {
+            System.out.println(getAgeByConsole());
         }catch (NullPointerException e){
-            System.out.println(getInputFromScanner(currentYear));
+            System.out.println(getAgeByScanner());
         }
 
     }
-   public static String getInputFromConsole(int currentYear){
 
-        String name = System.console().readLine("Hello Gentlemen, What's your Name? ");
-        String birthYear = System.console().readLine("So "+ name+" What year were you born? ");
-        int age = currentYear - Integer.parseInt(birthYear);
+    public static String getAgeByConsole(){
+        String currentYear = String.valueOf(Year.now().getValue());
 
-        return "You are " +age +" years old";
+        String name = System.console().readLine("Hey Gentlemen What's your name? ");
+
+        String dateOfBirthYear = System.console().readLine("Okay " + name + ", What year were you born? ");
+
+        int age = Integer.parseInt(currentYear) - Integer.parseInt(dateOfBirthYear);
+
+        return "So " + name + ", you are " + age +" years old.";
     }
 
-    public static String getInputFromScanner(int currentYear) {
+    public static String getAgeByScanner(){
+        int currentYear = Year.now().getValue();
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Hello Gentlemen, What's your Name? ");
+
+        System.out.println("Hey Gentlemen What's your name? ");
         String name = scanner.nextLine();
+        System.out.println("Okay " + name + ", What year were you born? ");
+        String dateOfBirthYear = scanner.nextLine();
+        int age = currentYear - Integer.parseInt(dateOfBirthYear);
 
-        System.out.println("So " + name + " What year were you born? ");
-        String birthYear = scanner.nextLine();
-
-        int age = currentYear - Integer.parseInt(birthYear);
-
-        return "You are " + age + " years old";
-
+        return "So " + name + ", you are " + age +" years old.";
     }
+
+
 }
