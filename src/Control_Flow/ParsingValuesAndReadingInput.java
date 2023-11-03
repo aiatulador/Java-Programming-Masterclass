@@ -7,9 +7,13 @@ public class ParsingValuesAndReadingInput {
 
 
         try {
-            System.out.println(getAgeByConsole());
+            //System.out.println(getAgeByConsole());
+            throw new NullPointerException("Null Point Exception Happened");
         }catch (NullPointerException e){
-            System.out.println(getAgeByScanner());
+            //System.out.println(getAgeByScanner());
+            System.out.println(e.getMessage());
+        }catch(ArithmeticException r){
+
         }
 
     }

@@ -7,6 +7,7 @@ public class main {
 
         Car car = new Car();
 
+
         System.out.println("Raw make "+ car.getMake());
         System.out.println("Raw model "+ car.getModel());
         System.out.println("Raw color "+ car.getColor());

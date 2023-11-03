@@ -8,6 +8,19 @@ public class BankAccount {
     private String email;
     private int phoneNumber;
 
+    public BankAccount(){
+        System.out.println("Empty Constructor Called: ");
+    }
+
+    public BankAccount(int accountNumber, double balance, String clientName, String email, int phoneNumber){
+        System.out.println("Another Constructor with parameter called: ");
+        this.accountNumber= accountNumber;
+        this.balance= balance;
+        this.clientName= clientName;
+        this.email= email;
+        this.phoneNumber=phoneNumber;
+    }
+
     public int getAccountNumber() {
         return accountNumber;
     }
@@ -48,7 +61,7 @@ public class BankAccount {
         this.phoneNumber = number;
     }
 
-    public void depositFund(double depositAmount) {
+    public void depositFund(double depositAmount, double balance) {
         balance += depositAmount;
         System.out.println("Deposit of $" + depositAmount + " made. New balance is $" + balance);
     }

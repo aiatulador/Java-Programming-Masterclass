@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
         BankAccount bankAccount = new BankAccount();
+//        List < BankAccount> bankAccounts = new ArrayList<>();
+//        bankAccounts.add(new BankAccount());
+
+        BankAccount bankAccount1= new BankAccount();
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter your Name: ");
@@ -30,18 +34,19 @@ public class main {
             System.out.println("Account Number: "+ bankAccount.getAccountNumber());
             System.out.println("Email: "+ bankAccount.getEmail());
             System.out.println("Phone Number: "+ bankAccount.getphoneNumber());
-            bankAccount.depositFund(Double.parseDouble(scanner.nextLine()));
+            System.out.println("Please Enter Deposit Amount: ");
+            bankAccount.depositFund(Double.parseDouble(scanner.nextLine()), bankAccount.getBalance());
         }
         else if(depW ==2){
             System.out.println("Account Name: "+ bankAccount.getClientName());
             System.out.println("Account Number: "+ bankAccount.getAccountNumber());
             System.out.println("Email: "+ bankAccount.getEmail());
             System.out.println("Phone Number: "+ bankAccount.getphoneNumber());
+            System.out.println("Please Enter Withdraw Amount: ");
             bankAccount.withdrawFund(Double.parseDouble(scanner.nextLine()));
         } else{
             System.out.println("Invalid Input");
         }
-
 
 
 
