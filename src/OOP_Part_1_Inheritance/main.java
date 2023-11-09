@@ -1,11 +1,9 @@
 package OOP_Part_1_Inheritance;
 
-import java.util.Scanner;
-
 public class main {
     public static void main(String[] args) {
 
-        Car car = new Car();
+/*        Car car = new Car();
 
 
         System.out.println("Raw make "+ car.getMake());
@@ -27,7 +25,13 @@ public class main {
         System.out.println("Is it Convertible? ");
         car.setConvertible(Boolean.parseBoolean(scanner.nextLine()));
 
-        car.describeCar();
+        car.describeCar();*/
+
+        TvSeries tvSeries = new TvSeries();
+        tvSeries.describeTVSeries();
+
+        System.out.println(tvSeries.getTvName());
+
 
     }
 }

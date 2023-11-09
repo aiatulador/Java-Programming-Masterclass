@@ -4,12 +4,11 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         BankAccount bankAccount = new BankAccount();
 //        List < BankAccount> bankAccounts = new ArrayList<>();
 //        bankAccounts.add(new BankAccount());
-
-        BankAccount bankAccount1= new BankAccount();
-        Scanner scanner = new Scanner(System.in);
+        System.out.println(bankAccount.getClientName());
 
         System.out.println("Enter your Name: ");
         bankAccount.setClientName(scanner.nextLine());

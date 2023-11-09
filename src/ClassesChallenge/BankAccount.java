@@ -9,6 +9,7 @@ public class BankAccount {
     private int phoneNumber;
 
     public BankAccount(){
+        this(12345,0.00,"Vladimir Putin","putin@russia.com",0123456);
         System.out.println("Empty Constructor Called: ");
     }
 
@@ -20,6 +21,7 @@ public class BankAccount {
         this.email= email;
         this.phoneNumber=phoneNumber;
     }
+
 
     public int getAccountNumber() {
         return accountNumber;
@@ -71,7 +73,7 @@ public class BankAccount {
             System.out.println("Insufficient Funds");
         }else{
             balance -= withdrawAmount;
-            System.out.println("$" + withdrawAmount + " Withdrawn. " + "New Balance is: " + balance);
+            System.out.println("$" + withdrawAmount + " Withdrew. " + "New Balance is: " + balance);
         }
     }
 }
